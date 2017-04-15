@@ -1,4 +1,4 @@
-page-home {
+page-login {
     display: block;
     position: relative;
     width: 100%;
@@ -40,9 +40,18 @@ page-home {
             width: 70%;
             height: 15%;
             font-size: 120%;
+            transition: 0.2s;
+        }
+        .btn-login.activated {
+            border: 1px solid transparent;
+            color: transparent;
         }
         .btn-create {
             background: transparent;
+            transition: 0.2s;
+        }
+        .btn-create.activated {
+            color: transparent;
         }
     }
 }
