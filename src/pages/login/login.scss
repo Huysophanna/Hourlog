@@ -7,7 +7,7 @@ page-login {
     .main-logo {
         display: inline-flex;
         position: relative;
-        align-items: flex-end;
+        align-items: center;
         width: 100%;
         height: 40%;
         img {
@@ -22,25 +22,52 @@ page-login {
         text-align: center;
         width: 100%;
         height: 30%;
-        p {
+        .welcome-text {
+            border-top: 1px solid $bluecolor;
+            border-bottom: 1px solid $bluecolor;
             font-size: 250%;
+        }
+        p {
+            width: 100%;
             margin: 0 auto;
+            font-size: 60%;
+        }
+        .input-login {
+            width: 80%;
+            margin: 0 auto;
+            //disable default border bottom for ios
+            .item-ios.item-block .item-inner {
+                border-bottom: 1px solid transparent;
+            }
+            //disable default border bottom for android
+            .item-md.item-block .item-inner {
+                border-bottom: 1px solid transparent;
+            }
+            .input-field {
+                border-bottom: 1px solid $bluecolor;
+            }
+            .error-message {
+                p {
+                    color: red;
+                }
+            }
         }
     }
     .btn-group {
         display: inline-block;
         position: relative;
         width: 100%;
-        height: 30%;
+        height: 40%;
         text-align: center;
-        margin-top: 10%;
+        margin-top: 15%;
         .btn-login {
             background: transparent;
             border: 1px solid $bluecolor;
-            width: 70%;
+            width: 82%;
             height: 15%;
-            font-size: 120%;
+            font-size: 180%;
             transition: 0.2s;
+            border-radius: 10px;
         }
         .btn-login.activated {
             border: 1px solid transparent;

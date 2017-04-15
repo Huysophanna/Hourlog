@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
-import { Login } from './login';
+import { Dashboard } from './dashboard';
 
 @NgModule({
   declarations: [
-    Login,
+    Dashboard,
   ],
   imports: [
     
   ],
   exports: [
-    Login
+    Dashboard
   ]
 })
-export class LoginModule {}
+export class DashboardModule {}
