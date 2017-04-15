@@ -10,16 +10,16 @@
     <div class="main-logo">
         <img src="assets/img/hourlog-logo.png">
     </div>
-    <div class="main-title">
-        <p>Welcome <br>The Hour Log</p>
+    <div class="main-content">
+        <p *ngIf="isStarted == undefined">Welcome <br>The Hour Log</p>
     </div>
     <div class="btn-group">
-        <button class="btn-login">
-          Login
+        <button (click)="BeginIsClicked();" *ngIf="isStarted == undefined" [ngStyle]="{'font-size': beginFontSize}" class="btn-begin">
+          Begin
         </button>
         <br>
-        <button class="btn-create">
-          Create Account
+        <button *ngIf="isStarted == true" class="btn-login">
+          Login
         </button>
     </div>
 </ion-content>

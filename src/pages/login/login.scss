@@ -15,7 +15,7 @@ page-login {
             margin: 0 auto;
         }
     }
-    .main-title {
+    .main-content {
         display: inline-flex;
         position: relative;
         align-items: center;
@@ -46,11 +46,13 @@ page-login {
             border: 1px solid transparent;
             color: transparent;
         }
-        .btn-create {
+        .btn-begin {
             background: transparent;
-            transition: 0.2s;
+            transition: 1s;
+            font-size: 150%;
+            color: $bluecolor;
         }
-        .btn-create.activated {
+        .btn-begin.activated {
             color: transparent;
         }
     }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -13,12 +13,38 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'login.html',
 })
 export class Login {
+  beginFontSize: any;
+  beginAnimateInterval: any;
+  isStarted: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    
+  }
+
+  ngAfterViewInit() {
+    this.beginAnimateInterval = setInterval(() => {
+      this.AnimateBeginFontSize();
+    }, 500);
+  }
+
+  AnimateBeginFontSize() {
+    this.beginFontSize = Math.floor(Math.random() * 200) + 150;
+    this.beginFontSize = this.beginFontSize + "%";
+    
+  }
+
+  BeginIsClicked() {
+    this.isStarted = true;
+    console.log(this.isStarted);
+    
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Login');
+  }
+
+  ionViewDidLeave() {
+    clearInterval(this.beginAnimateInterval);
   }
 
 }
